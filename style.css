@@ -29,7 +29,7 @@ h1 {
 
 .fa-rocket {
     -webkit-text-stroke: 1px #F4F4F8;
-    color: #d43256;
+    color: #e07e7d;
 }
 
 ul li:nth-child(2n) {
@@ -162,3 +162,19 @@ li:hover span {
     -webkit-text-stroke: 2px #009FB7;
 }
 
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .picked p {
+        margin-top: 20%;
+        font-size: 3em;
+        -webkit-text-stroke: 2px #F4F4F8;
+    }
+
+    .picked {
+        width: 95%;
+        left: 0%;
+    }
+}
