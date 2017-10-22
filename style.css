@@ -171,6 +171,7 @@ li:hover span {
         margin-top: 20%;
         font-size: 3em;
         -webkit-text-stroke: 2px #F4F4F8;
+        letter-spacing: 0.05em;
     }
 
     .picked {
