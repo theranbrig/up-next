@@ -27,7 +27,10 @@ $("#next").on("click", function () {
     classList.splice(random,1);
     //Remove List Item
     $(".studentList li").eq(random).remove();
-    $(".picked").show();  
+    $(".picked").fadeIn(500, function () {
+        $(".picked").show(); 
+        });
+     
 })
 
 
@@ -44,7 +47,10 @@ $("ul").on("click", "span", function (event) {
 })
 
 $(".picked").on("click", "button", function(){
-    $(".picked").hide();
+    $(this).parent().fadeOut(500, function () {
+        $(".picked").hide();
+        });
+    
 })
 
 
@@ -52,7 +58,12 @@ $(".picked").on("click", "button", function(){
 
 function addNew () {
     var name = $("input").val();
-    $("ul").append('<li><span><i class="fa fa-trash-o"></i></span>' + name + "</li>");
-    $("input").val("");
-    classList.push(name);
+    if ( name === "") {
+        $("input").attr('placeholder', 'You must type a name.');
+    } else {
+        $("ul").append('<li><span><i class="fa fa-trash-o"></i></span>' + name + "</li>");
+        $("input").val("");
+        $("input").attr('placeholder', 'Enter Student Names');
+        classList.push(name);
+    } 
 }
